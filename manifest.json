@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Shadowheart Browser Companion",
+    "description": "Have Shadowheart from Baldur's Gate 3 interact with you during your web searchings.",
+    "version": "1.0",
+    "icons": {
+
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action":{
+        "default_icon": "images/guilherme-tonini-shadowheart-1.jpg"
+    },
+    "permissions": ["scripting", "activeTab"],
+    "commands": {
+
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["main.js"]
+        }
+    ]
+}
