@@ -10,7 +10,7 @@
         "service_worker": "background.js"
     },
     "action":{
-        "default_icon": "images/guilherme-tonini-shadowheart-1.jpg"
+        "default_icon": "images/beautiful-shadowheart.png"
     },
     "permissions": ["scripting", "activeTab"],
     "commands": {

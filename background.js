@@ -1,9 +1,9 @@
 chrome.runtime.onInstalled.addListener(() => {
-    chrome.action.setBadgeText({
-      text: 'OFF'
-    });
+  chrome.action.setBadgeText({
+    text: 'OFF'
   });
-  
+});
+
 
 const extensions = 'https://developer.chrome.com/docs/extensions'
 const webstore = 'https://developer.chrome.com/docs/webstore'
@@ -13,16 +13,16 @@ const musics = ['https://music.youtube.com/', 'https://www.jango.com/', 'https:/
 
 
 function checkExtensions(tab, extents) {
-    for(var i = 0;  i < extents.length; i++){
-        if(tab.url.startsWith(extents[i])){
-            return true;
-        }
-    }
-    return false;
+  for(var i = 0;  i < extents.length; i++){
+      if(tab.url.startsWith(extents[i])){
+          return true;
+      }
+  }
+  return false;
 }
 
 chrome.action.onClicked.addListener(async (tab) => {
-    if (checkExtensions(tab, musics)) {
-      console.log("on music website");
-    }
-  });
+  if (checkExtensions(tab, musics)) {
+    console.log("on music website");
+  }
+});
